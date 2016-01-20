@@ -1,5 +1,6 @@
-@(products: List[Product])
-@main("Productencatalogus") {
+@(products: List[Product])(implicit lang: Lang)
+@import play.i18n._
+@main(Messages.get("application.name")) {
   <dl class="products">
     @for(product <- products) {
        <dt>@product.name</dt>
