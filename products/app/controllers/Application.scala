@@ -6,7 +6,6 @@ import play.api.mvc.Controller
 class Application extends Controller {
 
   def index = Action {
-//    Ok(views.html.index("Your Products Application is now ready."))
     Redirect(routes.Products.list())
   }
 
