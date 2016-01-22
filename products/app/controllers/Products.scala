@@ -13,4 +13,10 @@ class Products extends Controller {
     val lang = new Lang(Lang.forCode("es"))
     Ok(views.html.html.products.list.render(products, lang))
   }
+  
+  def show(ean: Long) = Action { implicit request =>
+      Product.findByEan(ean).map { product =>
+      Ok(views.html.products.details(product))
+    }.getOrElse(NotFound)
+  }
 }
