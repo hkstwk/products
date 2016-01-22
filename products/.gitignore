@@ -7,4 +7,4 @@ target
 /.settings
 /RUNNING_PID
 /bin/
-/products/.cache-main
+products/.cache-main
